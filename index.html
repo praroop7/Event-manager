@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Event Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🎓 College Event Manager</h1>
+    <p>Add, view, and register for college events</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Events</a>
+      <a href="upcoming-events.html">Future events</a>
+      <a href="past-events.html">Past events</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="organizer.html">Organizer</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card public-welcome">
+      <div>
+        <p class="page-kicker">CAMPUS, CONNECTED</p>
+        <h2>Find your next great experience.</h2>
+        <p>Explore what's happening, discover new interests, and reserve your place at campus events.</p>
+      </div>
+      <a class="page-action-link" href="upcoming-events.html">Explore future events <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="card ai-discovery" aria-labelledby="ai-discovery-title">
+      <div class="ai-discovery-copy">
+        <p class="page-kicker">PERSONALIZED EVENT DISCOVERY</p>
+        <h2 id="ai-discovery-title">A little help finding your people.</h2>
+        <p>Share a few interests and get explainable suggestions from upcoming events. Your interests are processed for this request only; no profile is created.</p>
+        <div class="ai-robot-wrap">
+          <span class="robot-emote robot-hi" aria-hidden="true">Hi, how can I help you? 👋</span>
+          <span class="robot-emote robot-searching-emote" aria-hidden="true">Searching… 🔎</span>
+          <span class="robot-emote robot-found-emote" aria-hidden="true">Found matches! ✨</span>
+          <span class="robot-emote robot-empty-emote" aria-hidden="true">Let’s try again! 💭</span>
+          <span class="robot-emote robot-thanks" aria-hidden="true">Thank you! 💙</span>
+          <svg class="ai-robot" viewBox="0 0 180 210" role="img" aria-label="A friendly full-body robot that waves hello and thanks you for searching">
+            <path class="robot-antenna" d="M90 20V12" />
+            <circle class="robot-antenna-tip" cx="90" cy="8" r="5" />
+            <rect class="robot-ear" x="45" y="49" width="11" height="24" rx="5.5" />
+            <rect class="robot-ear" x="124" y="49" width="11" height="24" rx="5.5" />
+            <rect class="robot-head" x="53" y="24" width="74" height="72" rx="23" />
+            <rect class="robot-face" x="62" y="39" width="56" height="43" rx="16" />
+            <circle class="robot-eye" cx="78" cy="57" r="4.5" />
+            <circle class="robot-eye" cx="102" cy="57" r="4.5" />
+            <path class="robot-smile" d="M78 69q12 11 24 0" />
+            <path class="robot-limb robot-left-arm" d="M60 111q-12 5-17 19l10 6 14-14" />
+            <rect class="robot-body" x="59" y="101" width="62" height="59" rx="17" />
+            <rect class="robot-chest" x="72" y="112" width="36" height="25" rx="8" />
+            <path class="robot-chest-line" d="M80 120h20m-16 7h12" />
+            <circle class="robot-button" cx="90" cy="148" r="3.5" />
+            <path class="robot-leg" d="M75 157v23m30-23v23" />
+            <path class="robot-foot" d="M68 179h12q6 0 6 7H63q0-5 5-7Zm30 0h12q5 0 6 7H93q0-7 5-7Z" />
+            <g class="robot-wave">
+              <path d="M120 111q13 4 17-9" />
+              <path d="M137 102q-6-6-2-10 4-3 8 4-2-9 3-10 6-1 6 8 2-7 7-5 5 3 0 11-7 11-18 13" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <form id="recommendationForm" class="recommendation-form">
+        <label for="recommendationInterests">What are you into?</label>
+        <div class="recommendation-input-row">
+          <input id="recommendationInterests" name="interests" maxlength="300" required placeholder="AI, music, sustainability…" />
+          <button id="voiceCommandButton" class="voice-command-button" type="button" aria-pressed="false" aria-label="Speak your interests">🎙️ Speak</button>
+          <button type="submit"><span class="ai-search-icon" aria-hidden="true">✦</span> Find events</button>
+        </div>
+        <p id="voiceCommandHint" class="recommendation-hint">Try saying “Find events about robotics.” Voice input is processed by your browser.</p>
+        <div class="recommendation-threshold">
+          <label for="recommendationThreshold">Minimum text-match strength <output id="recommendationThresholdValue" for="recommendationThreshold">0%</output></label>
+          <input id="recommendationThreshold" name="minimumMatch" type="range" min="0" max="60" step="5" value="0" />
+          <p class="recommendation-hint">This filter hides weaker text matches. The percentage measures text similarity, not the probability that you’ll enjoy an event.</p>
+        </div>
+        <fieldset class="recommendation-schedule">
+          <legend>When are you available?</legend>
+          <div class="recommendation-date-range">
+            <label for="recommendationDateFrom">From
+              <input id="recommendationDateFrom" name="dateFrom" type="date" />
+            </label>
+            <label for="recommendationDateTo">To
+              <input id="recommendationDateTo" name="dateTo" type="date" />
+            </label>
+          </div>
+          <label for="recommendationTime">Preferred time of day</label>
+          <select id="recommendationTime" name="timeOfDay">
+            <option value="any">Any time</option>
+            <option value="morning">Morning (5 am–11:59 am)</option>
+            <option value="afternoon">Afternoon (12 pm–4:59 pm)</option>
+            <option value="evening">Evening (5 pm–11:59 pm)</option>
+          </select>
+          <p class="recommendation-hint">Date filters use each event’s date. Time filters only include events whose published description mentions a matching time; events without a stated time are left out.</p>
+        </fieldset>
+        <p id="recommendationMessage" class="recommendation-message" role="status" aria-live="polite">Local content-based matching compares your interests with published event details. Your interests are used for this request only.</p>
+        <button id="robotSpeakButton" class="robot-speak-button" type="button" aria-pressed="false">🔊 Hear robot</button>
+      </form>
+      <div id="recommendationResults" class="recommendation-results" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>All Events</h2>
+        <a class="page-action-link" href="organizer.html">Organizer studio</a>
+      </div>
+
+      <div id="eventsList" class="events"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

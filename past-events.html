@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Look back at completed college events and review their details and registrations." />
+  <title>Past Events | College Event Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-event-view="past">
+  <header>
+    <h1>🗂️ Past Events</h1>
+    <p>Look back at the experiences that brought campus together</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Manage events</a>
+      <a href="upcoming-events.html">Future events</a>
+      <a href="past-events.html" aria-current="page">Past events</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="organizer.html">Organizer</a>
+    </nav>
+  </header>
+  <main class="event-page-main">
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p class="page-kicker">THE ARCHIVE</p>
+          <h2>Completed events</h2>
+          <p class="page-intro">Events dated before today appear here with their saved event and registration details.</p>
+        </div>
+        <a class="page-action-link" href="index.html">＋ Add an event</a>
+      </div>
+      <p id="pageSummary" class="page-summary" role="status" aria-live="polite"></p>
+      <div id="eventsList" class="events"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Register for a campus event." />
+  <title>Event Registration | College Event Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="registration.js" defer></script>
+</head>
+<body class="registration-page">
+  <header>
+    <h1>🎟️ Reserve your place</h1>
+    <p>A few details, then you’re all set</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Events</a>
+      <a href="upcoming-events.html">Future events</a>
+      <a href="past-events.html">Past events</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="organizer.html">Organizer</a>
+    </nav>
+  </header>
+  <main class="registration-main">
+    <section class="card registration-card" aria-labelledby="registrationTitle">
+      <div class="registration-heading">
+        <p class="page-kicker">EVENT REGISTRATION</p>
+        <h2 id="registrationTitle">Complete your registration</h2>
+        <p class="page-intro">Your details help the organizer manage attendance and contact you about this event.</p>
+      </div>
+
+      <section id="registrationEvent" class="registration-event" aria-label="Selected event" hidden>
+        <span class="registration-event-icon" aria-hidden="true">✦</span>
+        <div>
+          <p class="registration-event-label">You’re registering for</p>
+          <h3 id="registrationEventName"></h3>
+          <p id="registrationEventMeta" class="registration-event-meta"></p>
+        </div>
+      </section>
+
+      <p id="registrationStatus" class="registration-status is-loading" role="status" aria-live="polite">Loading event details…</p>
+
+      <form id="registrationForm" class="registration-form" hidden>
+        <div class="registration-form-heading">
+          <h3>Your details</h3>
+          <p>Fields marked <span aria-hidden="true">*</span> are required.</p>
+        </div>
+        <label for="registrationName">Full name <span class="required-mark" aria-hidden="true">*</span>
+          <input id="registrationName" name="student" type="text" maxlength="120" autocomplete="name" required />
+        </label>
+        <label for="registrationCollege">College name <span class="required-mark" aria-hidden="true">*</span>
+          <input id="registrationCollege" name="collegeName" type="text" maxlength="200" autocomplete="organization" required />
+        </label>
+        <label for="registrationEmail">Email address <span class="required-mark" aria-hidden="true">*</span>
+          <input id="registrationEmail" name="email" type="email" maxlength="254" autocomplete="email" required />
+        </label>
+        <label for="registrationPhone">Phone number <span class="optional-label">(optional)</span>
+          <input id="registrationPhone" name="phone" type="tel" maxlength="40" autocomplete="tel" />
+        </label>
+        <label for="registrationStudentId">Student ID <span class="optional-label">(optional)</span>
+          <input id="registrationStudentId" name="studentId" type="text" maxlength="80" autocomplete="off" />
+        </label>
+        <label for="registrationCourse">Course or department <span class="optional-label">(optional)</span>
+          <input id="registrationCourse" name="courseDepartment" type="text" maxlength="120" autocomplete="organization-title" />
+        </label>
+        <label for="registrationYear">Year of study <span class="optional-label">(optional)</span>
+          <select id="registrationYear" name="yearOfStudy">
+            <option value="">Select a year</option>
+            <option>1st year</option>
+            <option>2nd year</option>
+            <option>3rd year</option>
+            <option>4th year</option>
+            <option>5th year</option>
+            <option>Postgraduate</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <div class="registration-privacy field-wide">
+          <h3>How we use your details</h3>
+          <p>Your name, college, and email are shared with the event organizer to manage attendance and event-related communication. Phone, student ID, course/department, and year of study are optional. Registration details are not shown in public event listings and are automatically deleted within 30 days after the event. For privacy questions or deletion requests, contact the event organizer through your college.</p>
+        </div>
+        <label class="registration-consent field-wide">
+          <input name="privacyAcknowledged" type="checkbox" required />
+          <span>I understand how my registration details will be used and when they will be deleted.</span>
+        </label>
+        <div class="registration-submit field-wide">
+          <p id="registrationSubmitStatus" class="registration-submit-status" role="status" aria-live="polite"></p>
+          <button id="registrationSubmit" type="submit">Confirm registration <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+
+      <div id="registrationSuccess" class="registration-success" hidden>
+        <span class="registration-success-icon" aria-hidden="true">✓</span>
+        <div>
+          <h3>You're registered!</h3>
+          <p id="registrationSuccessMessage"></p>
+          <a class="page-action-link" href="upcoming-events.html">Explore more events <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

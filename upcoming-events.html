@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse upcoming college events and register while seats are available." />
+  <title>Future Events | College Event Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-event-view="upcoming">
+  <header>
+    <h1>📅 Future Events</h1>
+    <p>Discover what’s coming up and save your place</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Manage events</a>
+      <a href="upcoming-events.html" aria-current="page">Future events</a>
+      <a href="past-events.html">Past events</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="organizer.html">Organizer</a>
+    </nav>
+  </header>
+  <main class="event-page-main">
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p class="page-kicker">WHAT’S NEXT</p>
+          <h2>Upcoming on campus</h2>
+          <p class="page-intro">Events dated today or later appear here. Register to reserve a seat.</p>
+        </div>
+        <a class="page-action-link" href="index.html">＋ Add an event</a>
+      </div>
+      <p id="pageSummary" class="page-summary" role="status" aria-live="polite"></p>
+      <div id="eventsList" class="events"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

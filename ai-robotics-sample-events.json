@@ -1,0 +1,182 @@
+[
+  {
+    "id": "ai-robotics-sample-001",
+    "name": "AI Exploration Studio (Sample)",
+    "date": "2026-10-25",
+    "venue": "Digital Learning Lab",
+    "category": "AI",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 30
+  },
+  {
+    "id": "ai-robotics-sample-002",
+    "name": "Machine Learning Data Lab (Sample)",
+    "date": "2026-10-28",
+    "venue": "Computing Lab 2",
+    "category": "AI",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 28
+  },
+  {
+    "id": "ai-robotics-sample-003",
+    "name": "Computer Vision Workshop (Sample)",
+    "date": "2026-11-01",
+    "venue": "Innovation Hub",
+    "category": "AI",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 24
+  },
+  {
+    "id": "ai-robotics-sample-004",
+    "name": "AI for Climate Data (Sample)",
+    "date": "2026-11-04",
+    "venue": "Sustainability Studio",
+    "category": "AI",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 32
+  },
+  {
+    "id": "ai-robotics-sample-005",
+    "name": "Responsible AI Discussion Forum (Sample)",
+    "date": "2026-11-08",
+    "venue": "Library Seminar Room",
+    "category": "AI",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 40
+  },
+  {
+    "id": "ai-robotics-sample-006",
+    "name": "Neural Networks from Scratch (Sample)",
+    "date": "2026-11-12",
+    "venue": "Computing Lab 1",
+    "category": "AI",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 22
+  },
+  {
+    "id": "ai-robotics-sample-007",
+    "name": "AI Product Prototype Sprint (Sample)",
+    "date": "2026-11-16",
+    "venue": "Entrepreneurship Studio",
+    "category": "AI",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 36
+  },
+  {
+    "id": "ai-robotics-sample-008",
+    "name": "Natural Language Processing Clinic (Sample)",
+    "date": "2026-11-20",
+    "venue": "Digital Learning Lab",
+    "category": "AI",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 26
+  },
+  {
+    "id": "ai-robotics-sample-009",
+    "name": "Build an AI Study Companion (Sample)",
+    "date": "2026-11-24",
+    "venue": "Student Innovation Lab",
+    "category": "AI",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 30
+  },
+  {
+    "id": "ai-robotics-sample-010",
+    "name": "AI Research Poster Exchange (Sample)",
+    "date": "2026-11-28",
+    "venue": "Science Centre",
+    "category": "AI",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 50
+  },
+  {
+    "id": "ai-robotics-sample-011",
+    "name": "ROS Mobile Robot Workshop (Sample)",
+    "date": "2026-12-02",
+    "venue": "Makerspace",
+    "category": "Robotics",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 20
+  },
+  {
+    "id": "ai-robotics-sample-012",
+    "name": "Line-Following Robot Challenge (Sample)",
+    "date": "2026-12-06",
+    "venue": "Engineering Workshop",
+    "category": "Robotics",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 24
+  },
+  {
+    "id": "ai-robotics-sample-013",
+    "name": "Robotic Arm Design Studio (Sample)",
+    "date": "2026-12-10",
+    "venue": "Makerspace Bench A",
+    "category": "Robotics",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 18
+  },
+  {
+    "id": "ai-robotics-sample-014",
+    "name": "Autonomous Robot Navigation Lab (Sample)",
+    "date": "2026-12-14",
+    "venue": "Autonomy Lab",
+    "category": "Robotics",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 20
+  },
+  {
+    "id": "ai-robotics-sample-015",
+    "name": "Human-Robot Interaction Forum (Sample)",
+    "date": "2026-12-18",
+    "venue": "Design Studio",
+    "category": "Robotics",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 42
+  },
+  {
+    "id": "ai-robotics-sample-016",
+    "name": "Assistive Robotics Prototype Jam (Sample)",
+    "date": "2027-01-09",
+    "venue": "Inclusive Design Lab",
+    "category": "Robotics",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 28
+  },
+  {
+    "id": "ai-robotics-sample-017",
+    "name": "Robot Vision and Sensor Lab (Sample)",
+    "date": "2027-01-16",
+    "venue": "Engineering Lab 3",
+    "category": "Robotics",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 22
+  },
+  {
+    "id": "ai-robotics-sample-018",
+    "name": "Swarm Robotics Simulation Jam (Sample)",
+    "date": "2027-01-23",
+    "venue": "Computing Lab 3",
+    "category": "Robotics",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 30
+  },
+  {
+    "id": "ai-robotics-sample-019",
+    "name": "Robot Build-and-Test Hackathon (Sample)",
+    "date": "2027-02-06",
+    "venue": "Campus Makerspace",
+    "category": "Robotics",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 36
+  },
+  {
+    "id": "ai-robotics-sample-020",
+    "name": "Robotics Research Demo Day (Sample)",
+    "date": "2027-02-13",
+    "venue": "Innovation Auditorium",
+    "category": "Robotics",
+    "description": "Sample event. Topics: AI, artificial intelligence, machine learning, robotics, robot engineering.",
+    "seats": 60
+  }
+]

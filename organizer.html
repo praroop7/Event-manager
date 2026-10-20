@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Secure organizer workspace for managing college events and registrations." />
+  <title>Organizer Studio | College Event Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="organizer.js" defer></script>
+</head>
+<body class="organizer-page">
+  <header>
+    <p class="brand-mark">CAMPUS / EVENTS</p>
+    <h1>Organizer Studio</h1>
+    <p>One calm workspace for the details behind great campus events.</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Events</a>
+      <a href="upcoming-events.html">Future events</a>
+      <a href="past-events.html">Past events</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="organizer.html" aria-current="page">Organizer</a>
+    </nav>
+  </header>
+
+  <main class="organizer-main">
+    <section class="organizer-login card" id="loginPanel" aria-labelledby="login-title">
+      <div class="organizer-login-copy">
+        <p class="page-kicker">PRIVATE WORKSPACE</p>
+        <h2 id="login-title">Welcome back, organizer.</h2>
+        <p class="page-intro">Sign in to create events, update details, and review attendee registrations.</p>
+        <form id="loginForm" class="organizer-login-form">
+          <label for="organizerPassword">Organizer password</label>
+          <input id="organizerPassword" name="password" type="password" autocomplete="current-password" required minlength="12" />
+          <button type="submit">Sign in securely <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="organizer-message" id="loginMessage" role="status" aria-live="polite"></p>
+        <p class="security-note"><span aria-hidden="true">⌑</span> Protected with a private session. Attendee details are only shown to signed-in organizers.</p>
+      </div>
+      <div class="organizer-art-mosaic" aria-hidden="true">
+        <div class="organizer-art-tile organizer-art-tile-main">
+          <svg viewBox="0 0 320 220">
+            <defs>
+              <linearGradient id="loginArtBg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e8efed" />
+                <stop offset="1" stop-color="#d2dfdc" />
+              </linearGradient>
+            </defs>
+            <rect width="320" height="220" rx="22" fill="url(#loginArtBg)" />
+            <circle cx="252" cy="42" r="30" fill="#fffaf0" opacity=".72" />
+            <path d="M0 166q54-46 108 0t108 0 104 0v54H0z" fill="#c1d0c7" />
+            <path d="M82 171V91a78 78 0 0 1 156 0v80" fill="#f7f2e8" stroke="#aa9879" stroke-width="3" />
+            <path d="M104 171V93a56 56 0 0 1 112 0v78" fill="#dbe6e3" stroke="#c5b697" stroke-width="2" />
+            <path d="M143 171v-44h34v44" fill="#faf8f0" />
+            <path d="M160 127v44" stroke="#b69a6a" stroke-width="2" />
+            <circle cx="160" cy="75" r="12" fill="#c4a878" />
+            <path d="M139 126c2-25 9-37 21-37s19 12 21 37" fill="#829a92" />
+            <path d="M139 123l-15 20m57-20 15 20" stroke="#829a92" stroke-width="8" stroke-linecap="round" />
+            <path d="M55 167v-24m0 8-10-8m10 12 9-9m150 22v-24m0 8-10-8m10 12 9-9" stroke="#8b9d8e" stroke-width="3" stroke-linecap="round" />
+            <circle cx="58" cy="54" r="3" fill="#b99b6a" />
+            <circle cx="268" cy="114" r="4" fill="#b99b6a" />
+          </svg>
+        </div>
+        <div class="organizer-art-tile organizer-art-tile-small organizer-art-tech">
+          <svg viewBox="0 0 180 130">
+            <rect width="180" height="130" rx="18" fill="#e7e2d6" />
+            <path d="M40 24h34v28H40zm66 54h34v28h-34z" fill="#fffaf0" stroke="#baa77f" stroke-width="2" />
+            <path d="M74 38h26v21h19v19M56 53v25h50m17-16V42h18" fill="none" stroke="#718c8c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="57" cy="92" r="12" fill="#b8c9bf" />
+            <circle cx="138" cy="42" r="7" fill="#c2a36f" />
+            <circle cx="90" cy="38" r="4" fill="#c2a36f" />
+          </svg>
+        </div>
+        <div class="organizer-art-tile organizer-art-tile-small organizer-art-stage">
+          <svg viewBox="0 0 180 130">
+            <rect width="180" height="130" rx="18" fill="#e9dfd2" />
+            <circle cx="90" cy="54" r="29" fill="#f8f2e6" />
+            <circle cx="90" cy="54" r="19" fill="#d3b788" />
+            <circle cx="90" cy="54" r="7" fill="#798f8d" />
+            <path d="M29 112h122M43 100h94M55 88h70" stroke="#a48b66" stroke-width="3" stroke-linecap="round" />
+            <path d="M40 42l8-7m-4 18 10-2m78-9-8-7m4 18-10-2" stroke="#718c8c" stroke-width="3" stroke-linecap="round" />
+            <circle cx="41" cy="74" r="3" fill="#bd9d69" />
+            <circle cx="139" cy="74" r="3" fill="#bd9d69" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboardPanel" class="organizer-dashboard" hidden>
+      <section id="overview" class="organizer-overview" aria-labelledby="overview-title">
+        <div class="organizer-welcome">
+          <div>
+            <p class="page-kicker">YOUR EVENT OPERATIONS</p>
+            <h2 id="overview-title">Good planning makes memorable events.</h2>
+            <p>Keep event information current and registration capacity accurate.</p>
+          </div>
+          <div class="organizer-overview-actions">
+            <a class="page-action-link organizer-primary-action" href="#create-event">Create event <span aria-hidden="true">＋</span></a>
+            <button type="button" id="logoutButton" class="quiet-button">Sign out</button>
+          </div>
+        </div>
+
+        <div class="organizer-stats" aria-label="Event summary">
+          <article><span>Published events</span><strong id="statEvents">0</strong></article>
+          <article><span>Upcoming events</span><strong id="statUpcoming">0</strong></article>
+          <article><span>Student registrations</span><strong id="statRegistrations">0</strong></article>
+        </div>
+      </section>
+
+      <nav class="organizer-workspace-nav" aria-label="Organizer workspace">
+        <a href="#overview" aria-current="location">Overview</a>
+        <a href="#events">Events</a>
+        <a href="#create-event">Create Event</a>
+        <a href="#registrations">Registrations</a>
+      </nav>
+
+      <section id="create-event" class="card organizer-form-card" aria-labelledby="eventEditorTitle">
+        <div class="section-head">
+          <div>
+            <p class="page-kicker">EVENT EDITOR</p>
+            <h2 id="eventEditorTitle">Create an event</h2>
+            <p class="page-intro">Add clear details so students know what to expect.</p>
+          </div>
+          <button type="button" id="cancelEditButton" class="quiet-button" hidden>Cancel edit</button>
+        </div>
+        <form id="organizerEventForm" class="organizer-event-form">
+          <input id="eventId" type="hidden" />
+          <label>Event name<input id="eventName" name="name" maxlength="200" required placeholder="e.g. Student Innovation Showcase" /></label>
+          <label>Date<input id="eventDate" name="date" type="date" required /></label>
+          <label>Venue<input id="eventVenue" name="venue" maxlength="200" required placeholder="Building, hall, or online" /></label>
+          <label>Category <span class="optional-label">Optional</span><input id="eventCategory" name="category" maxlength="80" placeholder="Workshop, culture, careers…" /></label>
+          <label class="field-wide">Description <span class="optional-label">Optional</span><textarea id="eventDescription" name="description" maxlength="2000" rows="4" placeholder="Share the highlights, who should attend, and anything students should bring."></textarea></label>
+          <div class="ai-copy-assistant field-wide">
+            <div class="ai-copy-intro">
+              <span class="ai-copy-icon" aria-hidden="true">✦</span>
+              <div><strong>AI event-copy assistant</strong><p>Draft a clear description and a tailored publishing checklist. Review the text before publishing.</p></div>
+            </div>
+            <label for="eventAudience">Who is this for? <span class="optional-label">Optional</span></label>
+            <div class="ai-copy-controls">
+              <input id="eventAudience" maxlength="120" placeholder="e.g. first-year students, design enthusiasts" />
+              <button type="button" id="draftCopyButton" class="quiet-button">Draft with AI <span aria-hidden="true">✦</span></button>
+            </div>
+            <p id="aiCopyMessage" class="organizer-message" role="status" aria-live="polite"></p>
+            <ul id="aiCopyChecklist" class="ai-copy-checklist" hidden></ul>
+          </div>
+          <label>Available seats<input id="eventSeats" name="seats" type="number" min="0" max="100000" step="1" required value="50" /></label>
+          <div class="form-submit field-wide">
+            <button type="submit" id="saveEventButton">Publish event</button>
+            <p id="editorMessage" class="organizer-message" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+
+      <section id="events" class="card organizer-section-card" aria-labelledby="managed-events-title">
+        <div class="section-head">
+          <div><p class="page-kicker">EVENTS</p><h2 id="managed-events-title">Manage your events</h2></div>
+          <button id="refreshButton" type="button" class="quiet-button">Refresh</button>
+        </div>
+        <div id="managedEvents" class="managed-events"></div>
+      </section>
+
+      <section id="registrations" class="card organizer-section-card" aria-labelledby="registrations-title">
+        <div class="section-head">
+          <div><p class="page-kicker">ATTENDEE ROSTER</p><h2 id="registrations-title">Recent registrations</h2><p class="page-intro">Registration details are private and visible only in this organizer workspace.</p></div>
+        </div>
+        <div class="registration-table-wrap">
+          <table class="organizer-registration-table">
+            <thead><tr><th>Student</th><th>College</th><th>Contact</th><th>Study details</th><th>Event</th><th>Date</th><th>Registered</th><th><span class="visually-hidden">Actions</span></th></tr></thead>
+            <tbody id="organizerRegistrations"></tbody>
+          </table>
+        </div>
+        <p id="registrationEmpty" class="empty" hidden>No registrations have been made yet.</p>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

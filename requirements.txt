@@ -1,0 +1,1 @@
+# AI recommendation service uses only Python's standard library.

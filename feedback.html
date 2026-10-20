@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Share anonymous feedback to help make future campus events even better." />
+  <title>Feedback | College Event Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="feedback.js" defer></script>
+</head>
+<body class="feedback-page">
+  <header>
+    <h1>💬 Share your feedback</h1>
+    <p>Your thoughts help make the next campus event even better</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Events</a>
+      <a href="upcoming-events.html">Future events</a>
+      <a href="past-events.html">Past events</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="feedback.html" aria-current="page">Feedback</a>
+      <a href="organizer.html">Organizer</a>
+    </nav>
+  </header>
+  <main class="feedback-main">
+    <section class="card feedback-card" aria-labelledby="feedback-title">
+      <p class="page-kicker">WE’RE LISTENING</p>
+      <h2 id="feedback-title">How was your experience?</h2>
+      <p class="page-intro">Tell us what worked and what could be better. Feedback is anonymous—please don’t include private information.</p>
+      <form id="feedbackForm" class="feedback-form">
+        <label for="feedbackEvent">Which event is this about? <span class="optional-label">(optional)</span></label>
+        <select id="feedbackEvent" name="eventId">
+          <option value="">General campus event feedback</option>
+        </select>
+
+        <fieldset class="rating-fieldset">
+          <legend>Your rating</legend>
+          <div class="rating-options">
+            <label><input type="radio" name="rating" value="1" required /><span aria-hidden="true">★</span><span class="rating-label">1</span></label>
+            <label><input type="radio" name="rating" value="2" /><span aria-hidden="true">★</span><span class="rating-label">2</span></label>
+            <label><input type="radio" name="rating" value="3" /><span aria-hidden="true">★</span><span class="rating-label">3</span></label>
+            <label><input type="radio" name="rating" value="4" /><span aria-hidden="true">★</span><span class="rating-label">4</span></label>
+            <label><input type="radio" name="rating" value="5" /><span aria-hidden="true">★</span><span class="rating-label">5</span></label>
+          </div>
+          <span class="rating-hint">1 = needs improvement · 5 = excellent</span>
+        </fieldset>
+
+        <label for="feedbackMessage">What would you like us to know?</label>
+        <textarea id="feedbackMessage" name="message" maxlength="1000" required placeholder="Share what you enjoyed or what we could improve…"></textarea>
+        <div class="feedback-submit-row">
+          <p id="feedbackStatus" class="feedback-status" role="status" aria-live="polite"></p>
+          <button id="feedbackSubmit" type="submit">Send feedback <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
