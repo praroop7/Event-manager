@@ -1,3 +1,6 @@
+# Event-manager
+The Event Management System simplifies event creation, organization, and participant registration. It helps users explore events through AI-powered search while allowing organizers to manage event details in one place.
+
 # College Event Manager
 
 A responsive event site with an Express.js API, SQLite persistence, a public event browser, and a password-protected organizer workspace.
